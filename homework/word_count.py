@@ -7,12 +7,7 @@ import time
 
 
 def copy_raw_files_to_input_folder(n):
-    """
-    Copia n veces los archivos de files/raw a files/input.
-    
-    Args:
-        n: Número de veces que se replican los archivos.
-    """
+
     # Crea la carpeta files/input
     if os.path.exists("files/input/"):
         for file in glob.glob("files/input/*"):
@@ -37,13 +32,7 @@ def copy_raw_files_to_input_folder(n):
 
 
 def run_job(input_dir, output_dir):
-    """
-    Ejecuta el job de word count (MapReduce).
     
-    Args:
-        input_dir: Directorio de entrada con los archivos a procesar.
-        output_dir: Directorio de salida para los resultados.
-    """
     # El experimento realmente empieza en este punto.
     start_time = time.time()
 
